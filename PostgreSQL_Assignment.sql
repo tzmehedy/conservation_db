@@ -49,4 +49,5 @@ VALUES (1, 1, 1, 'Peak Ridge', '2024-05-10 07:45:00', 'Camera trap image capture
 INSERT INTO rangers(ranger_id,name, region)
 VALUES(4,'Derek Fox', 'Coastal Plains');
 
-
+-- Problem-02
+SELECT count(DISTINCT species_id) as unique_species_count FROM sightings;
