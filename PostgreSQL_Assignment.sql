@@ -43,3 +43,10 @@ VALUES (1, 1, 1, 'Peak Ridge', '2024-05-10 07:45:00', 'Camera trap image capture
 (4, 1, 2, 'Snowfall Pass', '2024-05-18 18:30:00', NULL);
 
 
+
+
+-- Problem-01
+INSERT INTO rangers(ranger_id,name, region)
+VALUES(4,'Derek Fox', 'Coastal Plains');
+
+
