@@ -21,7 +21,7 @@ CREATE TABLE sightings(
     ranger_id INT, 
     FOREIGN KEY(ranger_id) REFERENCES rangers(ranger_id),
     location TEXT,
-    sighting_time DATE,
+    sighting_time TIMESTAMP,
     notes TEXT
 );
 
@@ -65,4 +65,12 @@ Select name,count(*) as total_sightings from sightings
 SELECT common_name from sightings
     RIGHT JOIN species USING(species_id)
     WHERE sightings.sighting_id IS NULL;
-    
+
+
+-- Problem-06
+SELECT common_name, sighting_time, name from sightings
+    INNER JOIN rangers USING(ranger_id)
+    INNER JOIN species USING(species_id)
+    ORDER BY sighting_time DESC
+    LIMIT 2;
+
