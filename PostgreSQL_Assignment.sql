@@ -59,3 +59,10 @@ SELECT * from sightings
 Select name,count(*) as total_sightings from sightings
  JOIN rangers USING(ranger_id)
  GROUP BY name;
+
+-- Problem-05
+
+SELECT common_name from sightings
+    RIGHT JOIN species USING(species_id)
+    WHERE sightings.sighting_id IS NULL;
+    
