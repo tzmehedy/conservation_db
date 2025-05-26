@@ -87,4 +87,13 @@ Select sighting_id,
     END as time_of_day
 from sightings;
 
+-- problem-09
+DELETE FROM rangers WHERE ranger_id IN (
+    select ranger_id from rangers
+    LEFT JOIN sightings USING(ranger_id)
+    WHERE sighting_id Is NULL
+);
+
+
+
 
